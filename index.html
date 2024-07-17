@@ -50,7 +50,7 @@
             </li>
           </ul>
         </address>
-        <button type="button" class="open-menu-button">
+        <button id="open-menu-button" type="button" class="open-menu-button">
           <svg width="24" height="24">
             <use href="./images/icons.svg#icon-menu" />
           </svg>
@@ -63,7 +63,9 @@
           <h1 class="main-title-header">
             Effective Solutions for Your Business
           </h1>
-          <button type="button" class="main-title-button">Order Service</button>
+          <button id="order-button" type="button" class="main-title-button">
+            Order Service
+          </button>
         </div>
       </section>
       <section class="features-section">
@@ -631,9 +633,9 @@
         </div>
       </div>
     </footer>
-    <div id="modal" class="backdrop is-open">
+    <div id="modal" class="backdrop">
       <div class="modal">
-        <button type="button" class="modal-close-button">
+        <button id="modal-close" type="button" class="modal-close-button">
           <svg width="8" height="8">
             <use href="./images/icons.svg#icon-close" />
           </svg>
@@ -715,5 +717,92 @@
         </form>
       </div>
     </div>
+    <div id="menu" class="backdrop">
+      <div class="menu-container">
+        <button id="menu-close" type="button" class="menu-close-button">
+          <svg width="8" height="8">
+            <use href="./images/icons.svg#icon-close" />
+          </svg>
+        </button>
+        <nav>
+          <ul class="menu-list">
+            <li>
+              <a class="menu-link menu-link-current" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li><a class="menu-link" href="">Portfolio</a></li>
+            <li><a class="menu-link" href="">Contacts</a></li>
+          </ul>
+        </nav>
+        <address>
+          <ul class="menu-address-list">
+            <li>
+              <a class="menu-address-phone" href="tel:+110001111111">
+                +11 (000) 111-11-11
+              </a>
+            </li>
+            <li>
+              <a class="menu-address-mail" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+        </address>
+        <ul class="menu-social-list">
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://instagram.com">
+              <svg width="24" height="24" class="footer-social-icon">
+                <use href="./images/icons.svg#icon-instagram" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://twitter.com">
+              <svg width="24" height="24" class="footer-social-icon">
+                <use href="./images/icons.svg#icon-twitter" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://facebook.com">
+              <svg width="24" height="24" class="footer-social-icon">
+                <use href="./images/icons.svg#icon-facebook" />
+              </svg>
+            </a>
+          </li>
+          <li class="footer-social-item">
+            <a class="footer-social-link" href="https://linkedin.com">
+              <svg width="24" height="24" class="footer-social-icon">
+                <use href="./images/icons.svg#icon-linkedin" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script>
+      document
+        .querySelector("#order-button")
+        .addEventListener("click", function () {
+          document.querySelector("#modal").classList.toggle("is-open");
+        });
+      document
+        .querySelector("#modal-close")
+        .addEventListener("click", function () {
+          document.querySelector("#modal").classList.toggle("is-open");
+        });
+
+      document
+        .querySelector("#open-menu-button")
+        .addEventListener("click", function () {
+          document.querySelector("#menu").classList.toggle("is-open");
+        });
+      document
+        .querySelector("#menu-close")
+        .addEventListener("click", function () {
+          document.querySelector("#menu").classList.toggle("is-open");
+        });
+    </script>
   </body>
 </html>
